@@ -3,96 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Info</title>
+    <title>Server and Database Info</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             padding: 20px;
+            color: #333;
         }
-        .info-container {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-bottom: 20px;
+        }
+        .block {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-basis: 48%;
+        }
+        .block h2 {
+            margin-top: 0;
         }
         .info-line {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
         }
-        .info-line span {
-            flex: 1;
-        }
-        .copy-btn {
-            margin-left: 10px;
-            cursor: pointer;
-            color: #007bff;
+        .info-line button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
             border: none;
-            background: none;
-            font-size: 14px;
-            text-decoration: underline;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .info-line button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Server and Database Information</h1>
 
-    <div class="info-container">
+<div class="container">
+    <div class="block">
+        <h2>SERVER</h2>
         <div class="info-line">
-            <span>Server Name: LinhkienX</span>
-            <button class="copy-btn" onclick="copyToClipboard('Server Name: LinhkienX')">Copy</button>
+            <span>Tên server: LinhkienX</span>
+            <button onclick="copyToClipboard('LinhkienX')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Username: root</span>
-            <button class="copy-btn" onclick="copyToClipboard('Username: root')">Copy</button>
+            <span>Tên đăng nhập: root</span>
+            <button onclick="copyToClipboard('root')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Password: M3Zsyu46BQqZQSexMX3zcM3</span>
-            <button class="copy-btn" onclick="copyToClipboard('Password: M3Zsyu46BQqZQSexMX3zcM3')">Copy</button>
+            <span>Mật khẩu: M3Zsyu46BQqZQSexMX3zcM3</span>
+            <button onclick="copyToClipboard('M3Zsyu46BQqZQSexMX3zcM3')">Copy</button>
         </div>
         <div class="info-line">
-            <span>SSH Key: ssh-9-20-14-30-9-2020</span>
-            <button class="copy-btn" onclick="copyToClipboard('SSH Key: ssh-9-20-14-30-9-2020')">Copy</button>
+            <span>SSH key: ssh-9-20-14-30-9-2020</span>
+            <button onclick="copyToClipboard('ssh-9-20-14-30-9-2020')">Copy</button>
         </div>
         <div class="info-line">
-            <span>LAN Address: 10.20.1.210</span>
-            <button class="copy-btn" onclick="copyToClipboard('LAN Address: 10.20.1.210')">Copy</button>
+            <span>LAN address: 10.20.1.210</span>
+            <button onclick="copyToClipboard('10.20.1.210')">Copy</button>
         </div>
         <div class="info-line">
-            <span>WAN Address: 14.225.215.116</span>
-            <button class="copy-btn" onclick="copyToClipboard('WAN Address: 14.225.215.116')">Copy</button>
-        </div>
-        <div class="info-line">
-            <span>Database Name: thegioiic_db</span>
-            <button class="copy-btn" onclick="copyToClipboard('Database Name: thegioiic_db')">Copy</button>
-        </div>
-        <div class="info-line">
-            <span>Database Username: linhkienx</span>
-            <button class="copy-btn" onclick="copyToClipboard('Database Username: linhkienx')">Copy</button>
-        </div>
-        <div class="info-line">
-            <span>Database Password: 123456aA@</span>
-            <button class="copy-btn" onclick="copyToClipboard('Database Password: 123456aA@')">Copy</button>
-        </div>
-        <div class="info-line">
-            <span>Database Port: 3306</span>
-            <button class="copy-btn" onclick="copyToClipboard('Database Port: 3306')">Copy</button>
-        </div>
-        <div class="info-line">
-            <span>Database Host: 127.0.0.1</span>
-            <button class="copy-btn" onclick="copyToClipboard('Database Host: 127.0.0.1')">Copy</button>
-        </div>
-        <div class="info-line">
-            <span>Bitbucket Password: ATBBuLmCkEakgmss9StwDfFzMDwg34EF36B4</span>
-            <button class="copy-btn" onclick="copyToClipboard('Bitbucket Password: ATBBuLmCkEakgmss9StwDfFzMDwg34EF36B4')">Copy</button>
+            <span>WAN address: 14.225.215.116</span>
+            <button onclick="copyToClipboard('14.225.215.116')">Copy</button>
         </div>
     </div>
 
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                alert('Copied to clipboard');
-            }, function(err) {
-                console.error('Could not copy text: ', err);
-            });
-        }
-    </script>
+    <div class="block">
+        <h2>DATABASE</h2>
+        <div class="info-line">
+            <span>Database name: thegioiic_db</span>
+            <button onclick="copyToClipboard('thegioiic_db')">Copy</button>
+        </div>
+        <div class="info-line">
+            <span>Username: linhkienx</span>
+            <button onclick="copyToClipboard('linhkienx')">Copy</button>
+        </div>
+        <div class="info-line">
+            <span>Mật khẩu: 123456aA@</span>
+            <button onclick="copyToClipboard('123456aA@')">Copy</button>
+        </div>
+        <div class="info-line">
+            <span>Port: 3306</span>
+            <button onclick="copyToClipboard('3306')">Copy</button>
+        </div>
+        <div class="info-line">
+            <span>Host: 127.0.0.1</span>
+            <button onclick="copyToClipboard('127.0.0.1')">Copy</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="block">
+        <h2>BITBUCKET PASSWORD</h2>
+        <div class="info-line">
+            <span>ATBBuLmCkEakgmss9StwDfFzMDwg34EF36B4</span>
+            <button onclick="copyToClipboard('ATBBuLmCkEakgmss9StwDfFzMDwg34EF36B4')">Copy</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Copied to clipboard: ' + text);
+        }, function(err) {
+            alert('Failed to copy text: ' + err);
+        });
+    }
+</script>
+
 </body>
 </html>
