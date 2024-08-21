@@ -53,27 +53,27 @@
     <div class="block">
         <h2>SERVER</h2>
         <div class="info-line">
-            <span>Tên server: LinhkienX</span>
+            <span><b>Tên server</b>: LinhkienX</span>
             <button onclick="copyToClipboard('LinhkienX')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Tên đăng nhập: root</span>
+            <span><b>Tên đăng nhập</b>: root</span>
             <button onclick="copyToClipboard('root')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Mật khẩu: M3Zsyu46BQqZQSexMX3zcM3</span>
+            <span><b>Mật khẩu</b>: M3Zsyu46BQqZQSexMX3zcM3</span>
             <button onclick="copyToClipboard('M3Zsyu46BQqZQSexMX3zcM3')">Copy</button>
         </div>
         <div class="info-line">
-            <span>SSH key: ssh-9-20-14-30-9-2020</span>
+            <span><b>SSH key</b>: ssh-9-20-14-30-9-2020</span>
             <button onclick="copyToClipboard('ssh-9-20-14-30-9-2020')">Copy</button>
         </div>
         <div class="info-line">
-            <span>LAN address: 10.20.1.210</span>
+            <span><b>LAN address</b>: 10.20.1.210</span>
             <button onclick="copyToClipboard('10.20.1.210')">Copy</button>
         </div>
         <div class="info-line">
-            <span>WAN address: 14.225.215.116</span>
+            <span><b>WAN address</b>: 14.225.215.116</span>
             <button onclick="copyToClipboard('14.225.215.116')">Copy</button>
         </div>
     </div>
@@ -81,23 +81,23 @@
     <div class="block">
         <h2>DATABASE</h2>
         <div class="info-line">
-            <span>Database name: thegioiic_db</span>
+            <span><b>Database name</b>: thegioiic_db</span>
             <button onclick="copyToClipboard('thegioiic_db')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Username: linhkienx</span>
+            <span><b>Username</b>: linhkienx</span>
             <button onclick="copyToClipboard('linhkienx')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Mật khẩu: 123456aA@</span>
+            <span><b>Mật khẩu</b>: 123456aA@</span>
             <button onclick="copyToClipboard('123456aA@')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Port: 3306</span>
+            <span><b>Port</b>: 3306</span>
             <button onclick="copyToClipboard('3306')">Copy</button>
         </div>
         <div class="info-line">
-            <span>Host: 127.0.0.1</span>
+            <span><b>Host</b>: 127.0.0.1</span>
             <button onclick="copyToClipboard('127.0.0.1')">Copy</button>
         </div>
     </div>
@@ -116,7 +116,7 @@
 <script>
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(function() {
-            alert('Copied to clipboard: ' + text);
+            console.log('Copied to clipboard: ' + text);
         }, function(err) {
             alert('Failed to copy text: ' + err);
         });
